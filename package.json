@@ -1,0 +1,27 @@
+{
+  "name": "230730_vue_test",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && touch ./docs/.nojekyll",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vue": "^3.3.4"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.2.3",
+    "autoprefixer": "^10.4.14",
+    "eslint": "^8.46.0",
+    "eslint-plugin-vue": "^9.16.1",
+    "postcss": "^8.4.27",
+    "sass": "^1.64.2",
+    "vite": "^4.4.5"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ]
+}
