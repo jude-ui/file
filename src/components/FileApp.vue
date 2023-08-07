@@ -1,10 +1,10 @@
 <script setup>
-import { ref } from 'vue'
-import AlertLayer from './AlertLayer.vue'
+import { ref } from 'vue';
+import AlertLayer from './AlertLayer.vue';
 
-const isAlertVisible = ref(false)
-const portNumber = ref(0)
-const fileName = ref('')
+const isAlertVisible = ref(false);
+const portNumber = ref(0);
+const fileName = ref('');
 const fileNames = [
   'portfolio_description.pdf',
   'account-2019.zip',
@@ -16,35 +16,35 @@ const fileNames = [
   'kakaowork-2020.zip',
   'mtop-2021.zip',
   'pctop-2021.zip'
-]
-let repoName = import.meta.env.MODE === 'production' ?  '/file' : ''
+];
+let repoName = import.meta.env.MODE === 'production' ?  '/file' : '';
 
 const showAlert = (portnumber, filename) => {
-  isAlertVisible.value = true
-  portNumber.value = portnumber
-  fileName.value = filename
-}
-let refLinkDownload = []
+  isAlertVisible.value = true;
+  portNumber.value = portnumber;
+  fileName.value = filename;
+};
+let refLinkDownload = [];
 
 const setDownloadLinkRef = (idx) => {
   return (el) => {
-    refLinkDownload[idx] = el
-  }
-}
+    refLinkDownload[idx] = el;
+  };
+};
 
 const hideAalert = (portNum) => {
-  isAlertVisible.value = false
-  refLinkDownload[portNum].focus()
-}
+  isAlertVisible.value = false;
+  refLinkDownload[portNum].focus();
+};
 
 const fileDownload = (portNum) => {
-  const link = document.createElement('a')
-  link.href = `${repoName}/portfolio/${fileNames[portNum]}`
-  link.download = ''
-  link.click()
-  isAlertVisible.value = false
-  refLinkDownload[portNum].focus()
-}
+  const link = document.createElement('a');
+  link.href = `${repoName}/portfolio/${fileNames[portNum]}`;
+  link.download = '';
+  link.click();
+  isAlertVisible.value = false;
+  refLinkDownload[portNum].focus();
+};
 </script>
 
 <template>

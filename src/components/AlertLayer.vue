@@ -1,23 +1,23 @@
 <script setup>
-import { ref, nextTick } from 'vue'
+import { ref, nextTick } from 'vue';
 
 const props = defineProps({
   portNumber: { type: Number, required: true },
   fileName: { type: String, required: true }
-})
-const emit = defineEmits(['hideAlert', 'fileDownload'])
+});
+const emit = defineEmits(['hideAlert', 'fileDownload']);
 
 const onKeyDown = (event) => {
   // ESC 키를 눌렀을 때 hideAlert 이벤트 발생
   if (event.key === 'Escape') {
-    emit('hideAlert', props.portNumber)
+    emit('hideAlert', props.portNumber);
   }
-}
+};
 
-let refLayerAlert = ref(null)
+let refLayerAlert = ref(null);
 nextTick(() => {
-  refLayerAlert.value.focus()
-})
+  refLayerAlert.value.focus();
+});
   
 </script>
 

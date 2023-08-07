@@ -1,6 +1,6 @@
-import { defineConfig } from 'vite'
-import autoprefixer from 'autoprefixer'
-import vue from '@vitejs/plugin-vue'
+import { defineConfig } from 'vite';
+import autoprefixer from 'autoprefixer';
+import vue from '@vitejs/plugin-vue';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -20,13 +20,13 @@ export default defineConfig({
         entryFileNames: 'assets/main.js',
         chunkFileNames: 'assets/chunk.js',
         assetFileNames: (assetInfo) => {
-          const cssOrScssRegex = /\.(css|scss)$/i
+          const cssOrScssRegex = /\.(css|scss)$/i;
 
           if (cssOrScssRegex.test(assetInfo.name)) {
-            return 'assets/main.[ext]'
+            return 'assets/main.[ext]';
           }
 
-          return 'assets/[name].[ext]'
+          return 'assets/[name].[ext]';
         },
         // assetFileNames: 'assets/[name].[ext]'
       }
@@ -50,4 +50,4 @@ export default defineConfig({
       },
     },
   },
-})
+});

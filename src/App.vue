@@ -1,5 +1,5 @@
 <script setup>
-import FileApp from './components/FileApp.vue'
+import FileApp from './components/FileApp.vue';
 </script>
 
 <template>
