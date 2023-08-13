@@ -1,5 +1,5 @@
 <script setup>
-import { ref, nextTick } from 'vue';
+import { ref, onMounted } from 'vue';
 
 const props = defineProps({
   portNumber: { type: Number, required: true },
@@ -15,10 +15,9 @@ const onKeyDown = (event) => {
 };
 
 let refLayerAlert = ref(null);
-nextTick(() => {
+onMounted(() => {
   refLayerAlert.value.focus();
 });
-  
 </script>
 
 <template>
