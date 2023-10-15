@@ -48,7 +48,7 @@ const fileDownload = (portNum) => {
 </script>
 
 <template>
-  <div class="wrap test">
+  <div class="wrap">
     <h1 class="tit_port">
       경력증명 포트폴리오 파일 다운로드
     </h1>
